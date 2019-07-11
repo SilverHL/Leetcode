@@ -18,39 +18,29 @@ using namespace std;
 class Solution
 {
 
-int subarraysWithKDistincts(vector<int>& A, int k)
-{
-    int res = 0;
-    deque<int> deq;
-    int mp[1000];
-    memset(mp, 0, sizeof(mp));
-
-    for (int i = 0; i < A.size(); i++)
+public:
+    int subarraysWithKDistincts(vector<int>& A, int k)
     {
-        if (k != 0)
-        {
-            deq.push_back(A[i]);
-            if (mp[A[i]] == 0)
-                k--;
-            mp[A[i]]++;
-        }
-        else
-        {
-            res++;
-            while (k == 0)
+        int n = A.size();
+        int res;
+
+        auto sub = [&A](int k) {
+            int ans = 0;
+            int i = 0;
+            int mp[20005];
+            memset(mp, 0, sizeof(mp));
+            for (int j = 0; j < A.size(); j++)
             {
-                int n = deq[0];
-                mp[n]--;
-                deq.pop_front();
-                if (mp[n] == 0)
-                    k++;
+                if (mp[A[j]]++ == 0)
+                    --k;
+                while (k < 0)
+                    if (--mp[A[i++]] == 0) ++k;
+                    ans += j - i + 1;
             }
-            i--;
-        }
+
+            return ans;
+        };
+        return sub(k) - sub(k-1);
+
     }
-
-    return res;
-}
-
-
 };
