@@ -1,6 +1,9 @@
 #include <iostream>
-#include "992_SubarrayWithKDiffIntegers.cpp"
+#include <vector>
 
+#include "234_PalindromeLinkedList.cc"
+
+using namespace std;
 int main() {
 
     //Solution524 s;
@@ -9,9 +12,7 @@ int main() {
     //std::cout << s.FindLongestWord("abpcplea", vec);
     //
 
-    Solution s;
     vector<int> vec = {1, 2, 1, 2, };
-
 
 
 
