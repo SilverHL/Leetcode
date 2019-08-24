@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#include "234_PalindromeLinkedList.cc"
-#include "88_MergeSortedArray.cpp"
+#include "209_MinimumSizeSubarraySum.cpp"
 
 using namespace std;
 int main() {
@@ -13,9 +12,8 @@ int main() {
     //std::cout << s.FindLongestWord("abpcplea", vec);
     //
 
-    vector<int> vec = {1, 2, 3, 5, 0, 0, 0};
-    vector<int> vec2 = {2, 3, 4};
+    vector<int> vec = {2,3,1,2,4,3};
+    vector<int> vec1 = {1,2,3,4,5};
+    cout << minimumSizeSubSum(11, vec1);
 
-    merge(vec, 4, vec2, 3);
-    for_each(begin(vec), end(vec), [](int x) {cout << x << endl;});
 }
