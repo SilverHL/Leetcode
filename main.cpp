@@ -2,6 +2,8 @@
 #include <vector>
 
 #include "209_MinimumSizeSubarraySum.cpp"
+#include "845_LongestMountainInArray.cpp"
+#include "923_3SumWithMultiplicity.cpp"
 
 using namespace std;
 int main() {
@@ -12,8 +14,9 @@ int main() {
     //std::cout << s.FindLongestWord("abpcplea", vec);
     //
 
-    vector<int> vec = {2,3,1,2,4,3};
-    vector<int> vec1 = {1,2,3,4,5};
-    cout << minimumSizeSubSum(11, vec1);
+    vector<int> vec = {2,1,4,7,3,2,5};
+    vector<int> vec1 = {1,1,2,2,3,3,4,4,5,5};
+
+    cout << threeSumMulti(vec1, 8);
 
 }
