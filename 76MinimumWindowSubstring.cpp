@@ -5,66 +5,34 @@
 
 using namespace std;
 
-class Solution
+string minWindow(string s, string t)
 {
-public:
-	string minWindow(string s, string t)
-	{
-		vector<int> map(128, 0);
-		for (auto c : t) map[c]++;
-		int counter = t.size(), begin = 0, end = 0, d = INT_MAX, head = 0;
-		while (end < s.size())
-		{
-			if (map[s[end++]]-- > 0) 
-				counter--;
-			while (counter == 0)
-			{
-				if (end - begin < d)
-					d = end - (head = begin);
-				if (map[s[begin++]]++ == 0)
-					counter++;
-			}
-		}
-		return d == INT_MAX ? "" : s.substr(head, d);
-	}
-};
+    if (s.length() < t.length())
+        return "";
+    int mp[200];
+    memset(mp, 0, sizeof(mp));
+    for (auto i : t)
+        mp[i]++;
 
-int main76()
-{
-	string s = "ADOBECODEBANC";
-	string t = "ABC";
+    int l = 0, head = 0;
+    int r = 0;
+    int res = INT_MAX;
+    int n = s.length();
+    int len = t.length();
 
-	Solution s1;
-	cout << s1.minWindow(s, t);
-	
-	return 0;
+    while (r < n)
+    {
+        if (mp[s[r++]]-- > 0)
+            len--;
+
+        while (len == 0)
+        {
+            if (res > (r - l))
+                res = r - (head = l);
+            if (mp[s[l++]]++ == 0)
+                len++;
+        }
+    }
+    return res == INT_MAX ? "" : s.substr(head, res);
+
 }
-
-class test
-{
-public:
-	string tt(string s, string t)
-	{
-		int mp[128];
-		for (auto i : t)
-			mp[i]++;
-
-		int counter = t.size();
-		int end = 0; 
-		int beg = 0;
-		int d = INT_MAX, head = 0;
-		for (auto i : s)
-		{
-			if (mp[s[end++]]-- > 0)
-				counter--;
-
-			while (counter == 0)
-			{
-				if (d > end - beg)
-					d = end - (head = beg);
-				if (mp[s[beg++]]++ == 0)
-					counter++;
-			}
-		}
-	}
-};
