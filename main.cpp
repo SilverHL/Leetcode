@@ -2,12 +2,12 @@
 #include <vector>
 #include <string>
 
-#include "Two Pointers/30_SubstringOfConcatenationOfAllWords.cpp"
+#include "Array/905_SortArrayByParity.cpp"
+#include "Array/950_RevealCardsInIncreasingOrder.cpp"
 using namespace std;
 int main()
 {
-    string s = "wordgoodgoodgoodbestword";
-    vector<string> vec = {"word","good", "best", "word"};
-    vector<int> res = findSubstring(s, vec);
+    vector<int> vec = {3,1,2,4};
+    vector<int>res = sortArrayByParity(vec);
     for_each(res.begin(), res.end(), [&](int n) {cout << n << endl;});
 }
