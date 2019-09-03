@@ -2,12 +2,11 @@
 #include <vector>
 #include <string>
 
-#include "Array/905_SortArrayByParity.cpp"
-#include "Array/950_RevealCardsInIncreasingOrder.cpp"
+#include "Array/992_SortArrayByParityII.cpp"
 using namespace std;
 int main()
 {
-    vector<int> vec = {3,1,2,4};
-    vector<int>res = sortArrayByParity(vec);
-    for_each(res.begin(), res.end(), [&](int n) {cout << n << endl;});
+    vector<int> nums = {4,2,5,7};
+    vector<int> res = sortArrayByParityII(nums);
 }
+
