@@ -20,3 +20,7 @@ int findMaxConsecutiveOnes(vector<int>& nums)
     }
     return max_len;
 }
+
+int findMaxConsecutive(vector<int>& nums)
+{
+}ws
