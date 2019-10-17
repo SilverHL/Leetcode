@@ -17,7 +17,7 @@ using namespace std;
 
 int main()
 {
-    vector<int> vec = {1, 2, 3, 5, 6, 8, 9};
+    vector<int> vec = {4,3,2,7,8,2,3,1};
     vector<int> res = findDisappearedNumbers(vec);
 
     for_each(begin(res), end(res), [](int n) { cout << n << endl;});
