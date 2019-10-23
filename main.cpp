@@ -9,6 +9,7 @@
 #include "Array/1011_CapacityToShipPackagesWithinDDays.cpp"
 #include "Array/169_MajorityElement.cpp"
 #include "Array/448_FindAllNumbersDisappearedinanArray.cpp"
+#include "Array/216_CombinationSumIII.cpp"
 
 #include "6_ZigZagConversion.cpp"
 
@@ -17,9 +18,13 @@ using namespace std;
 
 int main()
 {
-    vector<int> vec = {4,3,2,7,8,2,3,1};
-    vector<int> res = findDisappearedNumbers(vec);
+    vector<vector<int>> res = combinationSum3(3, 7);
+    for (auto i : res) {
+        for (auto j : i)
+            cout << j << " ";
+        cout <<  endl;
+    }
 
-    for_each(begin(res), end(res), [](int n) { cout << n << endl;});
+
 }
 
