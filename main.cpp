@@ -10,7 +10,7 @@
 #include "Array/169_MajorityElement.cpp"
 #include "Array/448_FindAllNumbersDisappearedinanArray.cpp"
 #include "Array/216_CombinationSumIII.cpp"
-
+#include "Array/1052_GrumpyBookstoreOwner.cpp"
 #include "6_ZigZagConversion.cpp"
 
 using namespace std;
@@ -18,12 +18,10 @@ using namespace std;
 
 int main()
 {
-    vector<vector<int>> res = combinationSum3(3, 7);
-    for (auto i : res) {
-        for (auto j : i)
-            cout << j << " ";
-        cout <<  endl;
-    }
+    vector<int> cus = {4,10,10};
+    vector<int> g = {1,1,0};
+
+    cout << maxSatisfied(cus, g, 2);
 
 
 }
