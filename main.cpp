@@ -2,26 +2,15 @@
 #include <vector>
 #include <string>
 
-#include "Array/969_PancakeSorting.cpp"
-#include "Array/1170_CompareStringsByFranquencyOfSmallestCharacter.cpp"
-#include "Array/1089_DuplicateZeros.cpp"
-#include "Array/695_MaxAreaOfIsland.cpp"
-#include "Array/1011_CapacityToShipPackagesWithinDDays.cpp"
-#include "Array/169_MajorityElement.cpp"
-#include "Array/448_FindAllNumbersDisappearedinanArray.cpp"
-#include "Array/216_CombinationSumIII.cpp"
-#include "Array/1052_GrumpyBookstoreOwner.cpp"
-#include "6_ZigZagConversion.cpp"
+#include <Array/495_TeemoAttacking.cpp>
 
 using namespace std;
 
 
 int main()
 {
-    vector<int> cus = {4,10,10};
-    vector<int> g = {1,1,0};
-
-    cout << maxSatisfied(cus, g, 2);
+    vector<int> cus = {1,3,5,7,9,11,13,15};
+    cout << findPoisonedDuration(cus, 1);
 
 
 }
