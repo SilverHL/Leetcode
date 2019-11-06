@@ -2,9 +2,7 @@
 #include <vector>
 #include <string>
 
-#include <Array/667_BeautifulArrangementII.cpp>
-#include "Array/1035_UncrossedLines.cpp"
-#include "Array/714_BestTimeToBuyAndSellStockWithTransaction.cpp"
+#include "Array/697_DegreeOfAnArray.cpp"
 
 using namespace std;
 
@@ -12,8 +10,8 @@ using namespace std;
 int main()
 {
 
-    vector<int> A = {1, 3, 2, 8, 4, 9};
-    cout << maxProfit(A, 2);
+    vector<int> A = {2,1,1,2,1,3,3,3,1,3,1,3,2};
+    cout << findShortestSubArray(A);
 
 }
 
