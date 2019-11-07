@@ -27,7 +27,7 @@ public:
 
     int nxt(int n) {
         while (pos < A_.size() && n > 0) {
-            if (A_[pos] > n) {
+            if (A_[pos] >= n) {
                 A_[pos] -= n;
                 n = 0;
             } else {
@@ -37,7 +37,7 @@ public:
             }
         }
 
-        if (pos > A_.size())
+        if (pos >= A_.size()-1)
             return -1;
         return A_[pos+1];
     }
