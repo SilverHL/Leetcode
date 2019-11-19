@@ -24,10 +24,7 @@ int minFlipsMonoIncr(string S)
 
     int res = r[0];
     for (int i = 1; i <= n; i++)
-    {
         res = std::min(l[i-1] + r[i], res);
-    }
-
     return res;
 }
 
@@ -74,6 +71,5 @@ int minFlipsMonoIncr3(string S)
         dp1 = min(dp0, dp1 + (S[i] == '0'));
         dp0 = tmp0;
     }
-
     return min(dp0, dp1);
 }
