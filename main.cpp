@@ -4,16 +4,17 @@
 
 #include "Array/1014_BestSightseeingPair.cpp"
 #include "Array/1040_MovingStonesUntilConsecutiveII.cpp"
+#include "Array/1109_CorporateFlightsBookings.cpp"
 
 using namespace std;
 
 
 int main()
 {
-    vector<int> A = {8,7,6,5,10};
-    vector<int> res = numMovesStonesII(A);
-    cout << res[0] << endl;
-    cout << res[1] << endl;
+    vector<vector<int>> A = {
+            {1,2,10},{2,3,20},{2,5,25}};
+    vector<int> res = corpFlightBookings(A, 5);
+    for_each(begin(res), end(res), [](int n) { cout << n << endl; });
 
 }
 
