@@ -37,12 +37,9 @@ public:
         map<int, int>::const_iterator it = mp.lower_bound(start);
         if (it != mp.cend() && it->first < end)
             return false;
-
         if (it != mp.cend() && (--it)->second > start)
             return false;
-
         mp[start] = end;
         return true;
     }
-
 };
