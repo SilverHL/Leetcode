@@ -2,17 +2,14 @@
 #include <vector>
 #include <string>
 
-#include "Array/289_GameOfLife.cpp"
-#include "Array/729_MyCalendarI.cpp"
+#include "Array/717_1-bitAnd2-bitCharacters.cpp"
 
 using namespace std;
 
 
 int main()
 {
-    vector<vector<int>> A = {
-            {0,1,0},{0,0,1},{1,1,1},{0,0,0}};
-
-    cout << 0x10;
+    vector<int> A{};
+    cout << isOneBitCharacter(A);
 }
 
