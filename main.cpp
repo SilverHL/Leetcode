@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-#include  "Array/746_MinCostClimbingStairs.cpp"
+#include "Array/830_PositionsOfLargeGroups.cpp"
 
 
 using namespace std;
@@ -10,7 +10,12 @@ using namespace std;
 
 int main()
 {
-    vector<int> A = {1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-    cout << minCostClimbingStairs(A);
+    string S = "abcdddeeeeaabbbcd";
+    vector<vector<int>> res = largeGroupPosition(S);
+    for (auto& v : res) {
+        for (auto& i : v)
+            cout << i << " ";
+        cout << endl;
+    }
 }
 
