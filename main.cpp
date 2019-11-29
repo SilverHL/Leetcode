@@ -2,20 +2,15 @@
 #include <vector>
 #include <string>
 
-#include "Array/830_PositionsOfLargeGroups.cpp"
-
+#include "Array/718_MaximumLengthOfRepeatedSubarray.cpp"
 
 using namespace std;
 
 
 int main()
 {
-    string S = "abcdddeeeeaabbbcd";
-    vector<vector<int>> res = largeGroupPosition(S);
-    for (auto& v : res) {
-        for (auto& i : v)
-            cout << i << " ";
-        cout << endl;
-    }
+    vector<int> A = {1};
+    vector<int> B = {1};
+    cout << find(A, B);
 }
 
