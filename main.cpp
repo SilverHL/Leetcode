@@ -2,15 +2,14 @@
 #include <vector>
 #include <string>
 
-#include "Array/718_MaximumLengthOfRepeatedSubarray.cpp"
+#include "Array/768_MaxChunksToMakeSortedII.cc"
 
 using namespace std;
 
 
 int main()
 {
-    vector<int> A = {1};
-    vector<int> B = {1};
-    cout << find(A, B);
+    vector<int> A = {2,1,3,4,4,2};
+    cout << maxChunksToSortedIII(A);
 }
 
