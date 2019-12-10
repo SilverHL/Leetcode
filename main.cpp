@@ -1,14 +1,16 @@
 #include <iostream>
 #include <vector>
 
-#include "Array/974_SubarraysSumsDivisibleByK.cc"
+#include "Array/1053_PreviousPermutationWithOneSwap.cc"
 
 using namespace std;
 
 
 int main()
 {
-    vector<int> A = {4,5,0,-2,-3,1};
-    cout << subarraysDivByKII(A, 5);
+    vector<int> A = {3,1,1,3};
+    prevPermOpt1(A);
+
+    for_each(begin(A), end(A), [](int n) { cout << n << endl;});
 }
 
