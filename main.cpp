@@ -1,16 +1,14 @@
 #include <iostream>
 #include <vector>
 
-#include "Array/1053_PreviousPermutationWithOneSwap.cc"
+#include "Array/621_TaskScheduler.cc"
 
 using namespace std;
 
-
 int main()
 {
-    vector<int> A = {3,1,1,3};
-    prevPermOpt1(A);
+    vector<char> vec = {'A','A','A','B','B','B'};
+    cout << leastInterval(vec, 2);
 
-    for_each(begin(A), end(A), [](int n) { cout << n << endl;});
 }
 
