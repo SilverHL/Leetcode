@@ -3,11 +3,10 @@
 //
 #include <vector>
 #include <stack>
+#include <algorithm>
+#include <cstdlib>
 
-using std::min;
-using std::max;
-using std::vector;
-using std::stack;
+using namespace std;
 
 int maxChunksToSorted(vector<int>& arr)
 {
