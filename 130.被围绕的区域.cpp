@@ -22,12 +22,6 @@ public:
     }
 
 };
-
-template <typename T, std::size_t N>
-constexpr std::size_t (T (&)[N]) noexcept
-{
-    return N;
-}
 // @lc code=end
 
 

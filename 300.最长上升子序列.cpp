@@ -33,6 +33,7 @@ public:
         return res;
     }
     */
+   /*
     int lengthOfLIS(vector<int>& nums) 
     {
         if (nums.empty())
@@ -58,6 +59,35 @@ public:
         }
 
         return piles;
+    }
+    */
+
+    int lengthOfLIS(vector<int>& nums) 
+    {
+        if (nums.empty()) 
+            return 0;
+
+        int n = nums.size();
+        vector<int> cards(n, 0);
+        int piles = 0;
+        for (int i = 0; i < n; ++i) {
+            int pk = nums[i];
+            int left = 0, right = piles;
+            while (left < right) 
+            {
+                int mid = left + ((right - left) >> 1);
+                if (cards[mid] < pk) {
+                    left = mid + 1;
+                } else {
+                    right = mid;
+                }
+            }
+            cards[left] = pk;
+            if (left == piles) 
+                piles++;
+        }
+        return piles;
+
     }
     
 };
