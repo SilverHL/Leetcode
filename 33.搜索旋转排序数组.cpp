@@ -28,7 +28,7 @@ int search(vector<int>& nums, int target) {
             }
         } else {
             if (nums[mid] < target && target <= nums[right]) {
-                left = mid + 1;kkkkkk
+                left = mid + 1;
             } else {
                 right = mid - 1;
             }

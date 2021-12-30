@@ -13,22 +13,24 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) 
     {
-        if (s.empty()) return 0;
-        int n = s.length();
-
+        if (s.length() == 0) {
+            return 0;
+        }
         int mp[128];
+        int total = s.length();
         memset(mp, 0, sizeof(mp));
+        
+        int i = 0, j = 0;
         int res = 0;
-        int j = 0;
-
-        for (int i = 0; i < n; ++i) {
+        for ( ; i < total; ++i) {
             mp[s[i]]++;
-
-            while (j < i && mp[s[i]] > 1) {
-                --mp[s[j++]];
-            }
-            if (res < i - j + 1) 
-                res = i - j + 1;
+            if (mp[s[i]] > 1) {
+                while (j < i && s[j] != s[i]) {
+                    mp[s[j++]]--; 
+                }
+                mp[s[j++]]--;
+            } 
+            res = max(res, i -j + 1); 
         }
         return res;
     }

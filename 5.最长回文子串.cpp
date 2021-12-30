@@ -13,30 +13,29 @@ class Solution {
 public:
     string longestPalindrome(string s) 
     {
-        int n = s.length();
         string res = "";
-        for (int i = 0; i < n; ++i) 
-        {
-            string res1 = find_target(i, i, s);
-            string res2 = find_target(i, i+1, s);
-
-            if (res1.length() > res.length()) 
-                res = res1;
-            if (res2.length() > res.length())
-                res = res2;
+        int len = s.length();
+        for (int i = 0; i < len; i++) {
+            string s1 = find_target(s, i, i);
+            string s2 = find_target(s, i, i+1);
+            
+            if (s1.length() > res.length()) {
+                res = s1;
+            } 
+            if (s2.length() > res.length()) {
+                res = s2;
+            }
         }
-
         return res;
     }
 
-    string find_target(int l, int r, string &s)
-    {
-        int n = s.length();
-        while (l >= 0 && r < n && s[l] == s[r]) {
-            l--, r++; 
-        } 
-        return s.substr(l+1, r-1-l);
+    string find_target(string s, int i, int j) {
+        while (i >= 0 && j < s.length() && s[i] == s[j]) {
+            i--,j++;
+        }
+        return s.substr(i+1, j - i - 1);
     }
+
 };
 // @lc code=end
 

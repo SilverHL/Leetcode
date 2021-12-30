@@ -17,12 +17,11 @@ public:
         int row = s.length();
         int line = p.length();
 
-        vector<vector<bool>> dp(row+1, vector<bool>(line+1, false));
-
-        dp[0][0] = true;
+        vector<vector<int>> dp(row+1, vector<int>(line+1));
+        dp[0][0] = 1;
         for (int i = 1; i < line; ++i) {
             if (p[i] == '*' && dp[0][i-1]) 
-                dp[0][i+1] = true;
+                dp[0][i+1] = 1;
         }
 
         for (int i = 0; i < row; ++i) {
