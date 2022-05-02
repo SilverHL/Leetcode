@@ -34,7 +34,7 @@ struct cmp
 
 
 class TimeMap {
-    unordered_map<string, map<int, string>> mp;
+    unordered_map<string, map<int, string> > mp;
 public:
     /** Initialize your data structure here. */
     TimeMap() {
@@ -46,7 +46,7 @@ public:
     }
     
     string get(string key, int timestamp) {
-        auto &m = mp[key];
+        map<int, string> &m = mp[key];
         auto f = m.upper_bound(timestamp);
 
         return f == m.begin() ? "" : prev(f)->second;

@@ -21,7 +21,7 @@ public:
         dp[0][0] = 1;
         for (int i = 1; i < line; ++i) {
             if (p[i] == '*' && dp[0][i-1]) 
-                dp[0][i+1] = 1;
+                dp[0][+1] = 1;
         }
 
         for (int i = 0; i < row; ++i) {

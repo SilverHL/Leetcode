@@ -75,6 +75,9 @@
         "memory_resource": "cpp",
         "optional": "cpp",
         "shared_mutex": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "__string": "cpp",
+        "__tree": "cpp",
+        "__split_buffer": "cpp"
     }
 }
